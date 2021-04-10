@@ -1,0 +1,11 @@
+FROM scratch
+EXPOSE 8080
+COPY lasfileserver /
+COPY data data
+ENV APPINSIGHTS_INSTRUMENTATIONKEY '' \
+    CONNECTION_STRING '' \
+    OAUTH_CLIENT_ID '' \
+    OAUTH_CLIENT_SECRET '' \
+    COOKIE_STORE_SECRET '' \
+    OAUTH2_CALLBACK ''
+CMD [ "/lasfileserver" ]
